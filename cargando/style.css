@@ -1,315 +1,408 @@
-
- 
-
-
-body{
-    background-color: aquamarine;
+.about {
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.about .bg_links {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  background-image: url("logoLMsolo.png");
+}
+.about .logo {
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+  background-image: "logoLMsolo.png";
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  opacity: 0.9;
+  -webkit-transition: all 1s 0.2s ease;
+  transition: all 1s 0.2s ease;
+  bottom: 0;
+  right: 0;
+}
+.about .social {
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+}
+.about .social .icon {
+  width: 100%;
+  height: 100%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.2s ease, background-color 0.4s ease;
+  transition: all 0.2s ease, background-color 0.4s ease;
+  opacity: 0;
+  border-radius: 100%;
+}
+.about .social.portfolio {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.about .social.portfolio .icon {
+  background-image: url("https://rafaelalucas91.github.io/assets/codepen/link.svg");
+}
+.about .social.dribbble {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.about .social.dribbble .icon {
+  background-image: url("https://rafaelalucas91.github.io/assets/codepen/dribbble.svg");
+}
+.about .social.linkedin {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.about .social.linkedin .icon {
+  background-image: url("logoLMsolo.png");
+}
+.about:hover {
+  width: 105px;
+  height: 105px;
+  -webkit-transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+  transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .logo {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  background-image: url("logoLMsolo.png");
+}
+.about:hover .social {
+  opacity: 1;
+}
+.about:hover .social .icon {
+  opacity: 0.9;
+}
+.about:hover .social:hover {
+  background-size: 28px;
+}
+.about:hover .social:hover .icon {
+  background-size: 65%;
+  opacity: 1;
+}
+.about:hover .social.portfolio {
+  right: 0;
+  bottom: calc(100% - 40px);
+  -webkit-transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+  transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.portfolio .icon:hover {
+  background-color: #698fb7;
+}
+.about:hover .social.dribbble {
+  bottom: 45%;
+  right: 45%;
+  -webkit-transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+  transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.dribbble .icon:hover {
+  background-color: #ea4c89;
+}
+.about:hover .social.linkedin {
+  bottom: 0;
+  right: calc(100% - 40px);
+  -webkit-transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+  transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.linkedin .icon:hover {
+  background-color: #0077b5;
 }
 
-/* 
-.about{
-    $cubic: cubic-bezier(0.64, 0.01, 0.07, 1.65);
-    $transition: 0.6s $cubic;
-    $size: 40px;
-    position: fixed;
-    z-index: 10;
-    bottom: 10px;
-    right: 10px;
-    width: $size;
-    height: $size;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    transition: all 0.2s ease;
- 
-    .bg_links {
-       width: $size;
-       height: $size;
-       border-radius: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       background-color: rgba(#000000, 0.2);
-       border-radius: 100%;
-       backdrop-filter: blur(5px);
-       position: absolute;
-    }
- 
-    .logo {
-       width: $size;
-       height: $size;
-       z-index: 9;
-       background-image: url(https://rafaelalucas91.github.io/assets/codepen/logo_white.svg);
-       background-size: 50%;
-       background-repeat: no-repeat;
-       background-position: 10px 7px;
-       opacity: 0.9;
-       transition: all 1s 0.2s ease;
-       bottom: 0;
-       right: 0;
-    }
- 
-    .social {
-       opacity: 0;
-       right: 0;
-       bottom: 0;
- 
-       .icon {
-          width: 100%;
-          height: 100%;
-          background-size: 20px;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-color: transparent;
-          display: flex;
-          transition: all 0.2s ease, background-color 0.4s ease;
-          opacity: 0;
-          border-radius: 100%;
-       }
- 
-       &.portfolio {
-          transition: all 0.8s ease;
- 
-          .icon {
-             background-image: url(https://rafaelalucas91.github.io/assets/codepen/link.svg);
-          }
-       }
- 
-       &.dribbble {
-          transition: all 0.3s ease;
-          .icon {
-             background-image: url(https://rafaelalucas91.github.io/assets/codepen/dribbble.svg);
-          }
-       }
- 
-       &.linkedin {
-          transition: all 0.8s ease;
-          .icon {
-             background-image: url(https://rafaelalucas91.github.io/assets/codepen/linkedin.svg);
-          }
-       }
-    }
- 
-    &:hover {
-       width: 105px;
-       height: 105px;
-       transition: all $transition;
- 
-       .logo {
-          opacity: 1;
-          transition: all 0.6s ease;
-       }
- 
-       .social {
-          opacity: 1;
- 
-          .icon {
-             opacity: 0.9;
-          }
- 
-          &:hover {
-             background-size: 28px;
-             .icon {
-                background-size: 65%;
-                opacity: 1;
-             }
-          }
- 
-          &.portfolio {
-             right: 0;
-             bottom: calc(100% - 40px);
-             transition: all 0.3s 0s $cubic;
-             .icon {
-                &:hover {
-                   background-color: #698fb7;
-                }
-             }
-          }
- 
-          &.dribbble {
-             bottom: 45%;
-             right: 45%;
-             transition: all 0.3s 0.15s $cubic;
-             .icon {
-                &:hover {
-                   background-color: #ea4c89;
-                }
-             }
-          }
- 
-          &.linkedin {
-             bottom: 0;
-             right: calc(100% - 40px);
-             transition: all 0.3s 0.25s $cubic;
-             .icon {
-                &:hover {
-                   background-color: #0077b5;
-                }
-             }
-          }
-       }
-    }
- }
- 
- $dark-purple: #4b384c;
- $mid-purple: #632c65;
- $light-purple: #e2a9e5;
- $dark-grey: #383838;
- $bg: #fff0d0;
- 
- body {
-    background-color: $bg;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
- }
- #container {
-    //background-color: black;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
- }
- 
- #container span {
+body {
+  background-color: #fff0d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  width: 150px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+#container span {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  border-radius: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  background-image: url("logoLMsolo.png");
+}
+
+#container span:after {
+  content: "";
+  width: 130%;
+  height: 130%;
+  background-color: inherit;
+  position: absolute;
+  border-radius: 300px;
+  opacity: 0;
+  background-image: url("logoLMsolo.png");
+}
+
+#container span:before {
+  content: "";
+  width: 140%;
+  height: 140%;
+  background-color: inherit;
+  position: absolute;
+  border-radius: 300px;
+  opacity: 0.1;
+  background-image: url("logoLMsolo.png");
+}
+
+#container span:nth-child(1) {
+  left: 0px;
+  background-color: #e2a9e5;
+  background-image: url("logoLMsolo.png");
+  -webkit-animation: load1 2s infinite alternate;
+          animation: load1 2s infinite alternate;
+}
+
+#container span:nth-child(2) {
+  background-color: #652c2c;
+  -webkit-animation: load2 2s infinite alternate;
+          animation: load2 2s infinite alternate;
+  z-index: 1;
+}
+
+#container span:nth-child(3) {
+  background-color: #220bf1;
+  right: 0px;
+  -webkit-animation: load3 2s 0.3s infinite alternate;
+          animation: load3 2s 0.3s infinite alternate;
+}
+
+@-webkit-keyframes load1 {
+  0% {
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #e2a9e5;
+    background-image: url("logoLMsolo.png");
+  }
+  20% {
+    width: 25px;
+    height: 25px;
+    background-color: #e2a9e5;
+    background-image: url("logoLMsolo.png");
+  }
+  30% {
+    width: 35px;
+    height: 20px;
+    background-image: url("logoLMsolo.png");
+  }
+  35% {
+    background-color: #652c2c;
+    background-image: url("logoLMsolo.png");
+  }
+  50% {
     width: 30px;
     height: 30px;
-    display: block;
-    position: absolute;
-    border-radius: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation-timing-function: ease-in-out;
- }
- #container span:after {
-    content: "";
-    width: 130%;
-    height: 130%;
-    //top: 80px;
-    background-color: inherit;
-    position: absolute;
-    border-radius: 300px;
-    opacity: 0;
- }
- 
- #container span:before {
-    content: "";
-    width: 140%;
-    height: 140%;
-    background-color: inherit;
-    position: absolute;
-    border-radius: 300px;
-    opacity: 0.1;
- }
- 
- #container span:nth-child(1) {
-    left: 0px;
-    background-color: $light-purple;
-    animation: load1 2s infinite alternate;
- }
- 
- #container span:nth-child(2) {
-    background-color: $mid-purple;
-    animation: load2 2s infinite alternate;
-    z-index: 1;
- }
- #container span:nth-child(3) {
-    background-color: $dark-purple;
-    right: 0px;
-    animation: load3 2s 0.3s infinite alternate;
- }
- 
- @keyframes load1 {
-    0% {
-       left: 0;
-       width: 40px;
-       height: 40px;
-       background-color: $light-purple;
-    }
-    20% {
-       width: 25px;
-       height: 25px;
-       background-color: $light-purple;
-    }
-    30% {
-       width: 35px;
-       height: 20px;
-    }
-    35% {
-       background-color: $mid-purple;
-    }
- 
-    50% {
-       width: 30px;
-       height: 30px;
-       background-color: $mid-purple;
-    }
- 
-    90%,
-    100% {
-       left: calc(50% - 15px);
-       width: 30px;
-       height: 30px;
-       background-color: $mid-purple;
-    }
- }
- 
- @keyframes load3 {
-    0% {
-       right: 0;
-       width: 40px;
-       height: 40px;
-       background-color: $dark-purple;
-    }
-    20% {
-       width: 25px;
-       height: 25px;
-       background-color: $dark-purple;
-    }
-    30% {
-       width: 35px;
-       height: 20px;
-    }
- 
-    50% {
-       width: 30px;
-       height: 30px;
-       background-color: $mid-purple;
-    }
- 
-    90%,
-    100% {
-       right: calc(50% - 15px);
-       width: 30px;
-       height: 30px;
-       background-color: $mid-purple;
-    }
- }
- 
- @keyframes load2 {
-    0% {
-       width: 40px;
-       height: 40px;
-    }
- 
-    40% {
-       width: 30px;
-       height: 30px;
-    }
- 
-    80% {
-       width: 40px;
-       height: 40px;
-    }
- 
-    100% {
-       width: 30px;
-       height: 30px;
-    }
- }
-  */
+    background-color: #652c2c;
+    background-image: url("logoLMsolo.png");
+  }
+  90%, 100% {
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-color: #652c2c;
+    background-image: url("logoLMsolo.png");
+  }
+}
+
+@keyframes load1 {
+  0% {
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #e2a9e5;
+    background-image: url("logoLMsolo.png");
+  }
+  20% {
+    width: 25px;
+    height: 25px;
+    background-color: #e2a9e5;
+    background-image: url("logoLMsolo.png");
+  }
+  30% {
+    width: 35px;
+    height: 20px;
+    background-image: url("logoLMsolo.png");
+  }
+  35% {
+    background-color: #652c2c;
+    background-image: url("logoLMsolo.png");
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    background-color: #652c2c;
+    background-image: url("logoLMsolo.png");
+  }
+  90%, 100% {
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-color: #652c2c;
+    background-image: url("logoLMsolo.png");
+  }
+}
+@-webkit-keyframes load3 {
+  0% {
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #220bf1;
+  }
+  20% {
+    width: 25px;
+    height: 25px;
+    background-color: #220bf1;
+  }
+  30% {
+    width: 35px;
+    height: 20px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    background-color: #652c2c;
+  }
+  90%, 100% {
+    right: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-color: #652c2c;
+  }
+}
+@keyframes load3 {
+  0% {
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #220bf1;
+  }
+  20% {
+    width: 25px;
+    height: 25px;
+    background-color: #220bf1;
+  }
+  30% {
+    width: 35px;
+    height: 20px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    background-color: #652c2c;
+  }
+  90%, 100% {
+    right: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-color: #652c2c;
+  }
+}
+@-webkit-keyframes load2 {
+  0% {
+    width: 40px;
+    height: 40px;
+  }
+  40% {
+    width: 30px;
+    height: 30px;
+  }
+  80% {
+    width: 40px;
+    height: 40px;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes load2 {
+  0% {
+    width: 40px;
+    height: 40px;
+  }
+  40% {
+    width: 30px;
+    height: 30px;
+  }
+  80% {
+    width: 40px;
+    height: 40px;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+  }
+}
