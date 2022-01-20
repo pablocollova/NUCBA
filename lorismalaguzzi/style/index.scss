@@ -1,0 +1,194 @@
+$lorisIMG   :url("../images/logoLM.png");
+$primariaIMG:url("../images/logoPrimaria.png");
+$jardinIMG  :url("../images/logojardin.png");
+//$bgbody
+// @if vh<vw {
+
+// $izquierda:0vw;
+// $centro   :15vw;
+// $derecha  :30vw;
+// $alto: 15vw;
+// }
+//  @else  {
+//   $izquierda:0vw;
+// $centro   :15vw;
+// $derecha  :30vw;
+// }
+
+$displayWidth:25vw;
+$ancho:15vw;
+$alto:15vw;
+$izquierda:-15 + $displayWidth ;
+$centro   :$displayWidth;
+$derecha  :65vw - $displayWidth;
+$alto     : 15vw;
+
+@mixin latido60() {
+
+
+  left            : $centro;
+  width           : 10vw;
+  height          : 10vw;
+  background-image: url("../images/logoLM.png");
+}
+
+@mixin latido80() {
+
+
+  left            : $centro;
+  width           : 12vw;
+  height          : 12vw;
+  background-image: url("../images/logoLM.png");
+}
+
+@mixin animLogo($izq, $ancho, $alto, $imagen) {
+  left            : $izq;
+  width           : $ancho;
+  height          : $alto;
+  background-image: $imagen;
+}
+
+
+@mixin logoAnimado($logo, $bgColor, $animName) {
+  height: 10vw;
+  width : 10vw;
+
+  //background-color: $bgColor; 
+  background-image: $logo no-repeat center center fixed;
+
+  animation-name           : $animName;
+  animation-duration       : 8s;
+  animation-delay          : 2s;
+  background-size          : contain;
+  background-repeat        : no-repeat;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position                 : absolute;
+  justify-content          : center;
+  overflow                 : visible;
+  top                      : 50vw;
+
+
+}
+
+body {
+  background: #303030;
+}
+
+
+
+.logosAnimados {
+  position        : relative;
+  height          : 40vw;
+  width           : 60vw;
+  margin          : 0 auto;
+  overflow        : visible;
+  background-color: white;
+  top             : 35vw;
+  align-items     : center;
+  justify-content : center;
+  align-content   : center;
+
+
+}
+
+.loris {
+  @include logoAnimado("../images/logoLMs.png", rgba(129, 31, 31, 0.5), "animaloris");
+  top: 0;
+}
+
+
+.primaria {
+  @include logoAnimado("../images/logoPrimaria.png", rgba(255, 255, 255, 0.5), "animaprimaria");
+
+  top: 0;
+}
+
+
+.jardin {
+  @include logoAnimado("../images/logoJardin.png", rgba(255, 255, 255, 0.5), "animajardin");
+
+  top: 0;
+}
+
+@keyframes animajardin {
+  0% {
+    @include animLogo($centro, 10vw, 10vw, $lorisIMG);
+  }
+
+  10% {
+    @include animLogo($izquierda+2, 12vw, 12vw, $jardinIMG);
+  }
+
+
+  25% {
+    @include animLogo($izquierda, 15vw, 15vw, $jardinIMG);
+  }
+
+  50% {
+    @include animLogo($izquierda, 12vw, 12vw, $jardinIMG);
+  }
+
+  60% {
+    @include latido60();
+  }
+
+  80% {
+    @include latido80();
+  }
+
+  100% {
+    @include latido60();
+  }
+
+}
+
+@keyframes animaloris {
+  0% { @include animLogo($centro, 10vw, 10vw, $lorisIMG);}
+
+
+
+  50% {
+    @include animLogo($centro+5, 7vw, 7vw, $lorisIMG);
+  }
+
+  60% {
+    @include latido60();
+  }
+
+  80% {
+    @include latido80();
+  }
+
+  100% {
+    @include latido60();
+  }
+}
+
+@keyframes animaprimaria {
+  0% { @include animLogo($centro, 10vw, 10vw, $lorisIMG);
+  }
+
+  15% { @include animLogo($derecha - 2, 11vw, 11vw, $primariaIMG);
+    }
+
+  25% { @include animLogo($derecha, 12vw, 12vw, $primariaIMG);
+  }
+
+  50% { @include animLogo($derecha - 2, 11vw, 11vw, $primariaIMG);
+  }
+
+  60% {
+    @include latido60();
+  }
+
+  80% {
+    @include latido80();
+  }
+
+  100% {
+    @include latido60();
+  }
+
+
+}

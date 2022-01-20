@@ -17,6 +17,7 @@
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+
 .about .bg_links {
   width: 40px;
   height: 40px;
@@ -37,6 +38,7 @@
   position: absolute;
   background-image: url("logoLMsolo.png");
 }
+
 .about .logo {
   width: 40px;
   height: 40px;
@@ -51,11 +53,13 @@
   bottom: 0;
   right: 0;
 }
+
 .about .social {
   opacity: 0;
   right: 0;
   bottom: 0;
 }
+
 .about .social .icon {
   width: 100%;
   height: 100%;
@@ -71,76 +75,94 @@
   opacity: 0;
   border-radius: 100%;
 }
+
 .about .social.portfolio {
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
+
 .about .social.portfolio .icon {
   background-image: url("https://rafaelalucas91.github.io/assets/codepen/link.svg");
 }
+
 .about .social.dribbble {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 .about .social.dribbble .icon {
   background-image: url("https://rafaelalucas91.github.io/assets/codepen/dribbble.svg");
 }
+
 .about .social.linkedin {
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
+
 .about .social.linkedin .icon {
   background-image: url("logoLMsolo.png");
 }
+
 .about:hover {
   width: 105px;
   height: 105px;
   -webkit-transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
   transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
 }
+
 .about:hover .logo {
   opacity: 1;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
   background-image: url("logoLMsolo.png");
 }
+
 .about:hover .social {
   opacity: 1;
 }
+
 .about:hover .social .icon {
   opacity: 0.9;
 }
+
 .about:hover .social:hover {
   background-size: 28px;
 }
+
 .about:hover .social:hover .icon {
   background-size: 65%;
   opacity: 1;
 }
+
 .about:hover .social.portfolio {
   right: 0;
   bottom: calc(100% - 40px);
   -webkit-transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
   transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
 }
+
 .about:hover .social.portfolio .icon:hover {
   background-color: #698fb7;
 }
+
 .about:hover .social.dribbble {
   bottom: 45%;
   right: 45%;
   -webkit-transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
   transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
 }
+
 .about:hover .social.dribbble .icon:hover {
   background-color: #ea4c89;
 }
+
 .about:hover .social.linkedin {
   bottom: 0;
   right: calc(100% - 40px);
   -webkit-transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
   transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
 }
+
 .about:hover .social.linkedin .icon:hover {
   background-color: #0077b5;
 }
@@ -268,7 +290,8 @@ body {
     background-color: #652c2c;
     background-image: url("logoLMsolo.png");
   }
-  90%, 100% {
+  90%,
+  100% {
     left: calc(50% - 15px);
     width: 30px;
     height: 30px;
@@ -306,7 +329,8 @@ body {
     background-color: #652c2c;
     background-image: url("logoLMsolo.png");
   }
-  90%, 100% {
+  90%,
+  100% {
     left: calc(50% - 15px);
     width: 30px;
     height: 30px;
@@ -314,6 +338,7 @@ body {
     background-image: url("logoLMsolo.png");
   }
 }
+
 @-webkit-keyframes load3 {
   0% {
     right: 0;
@@ -335,13 +360,15 @@ body {
     height: 30px;
     background-color: #652c2c;
   }
-  90%, 100% {
+  90%,
+  100% {
     right: calc(50% - 15px);
     width: 30px;
     height: 30px;
     background-color: #652c2c;
   }
 }
+
 @keyframes load3 {
   0% {
     right: 0;
@@ -363,13 +390,15 @@ body {
     height: 30px;
     background-color: #652c2c;
   }
-  90%, 100% {
+  90%,
+  100% {
     right: calc(50% - 15px);
     width: 30px;
     height: 30px;
     background-color: #652c2c;
   }
 }
+
 @-webkit-keyframes load2 {
   0% {
     width: 40px;
@@ -388,6 +417,7 @@ body {
     height: 30px;
   }
 }
+
 @keyframes load2 {
   0% {
     width: 40px;
@@ -406,3 +436,4 @@ body {
     height: 30px;
   }
 }
+/*# sourceMappingURL=style.css.map */

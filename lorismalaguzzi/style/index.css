@@ -1,0 +1,343 @@
+body {
+  background: #303030;
+}
+
+.logosAnimados {
+  position: relative;
+  height: 40vw;
+  width: 60vw;
+  margin: 0 auto;
+  overflow: visible;
+  background-color: white;
+  top: 35vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.loris {
+  height: 10vw;
+  width: 10vw;
+  background-image: "../images/logoLMs.png" no-repeat center center fixed;
+  -webkit-animation-name: "animaloris";
+          animation-name: "animaloris";
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: visible;
+  top: 50vw;
+  top: 0;
+}
+
+.primaria {
+  height: 10vw;
+  width: 10vw;
+  background-image: "../images/logoPrimaria.png" no-repeat center center fixed;
+  -webkit-animation-name: "animaprimaria";
+          animation-name: "animaprimaria";
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: visible;
+  top: 50vw;
+  top: 0;
+}
+
+.jardin {
+  height: 10vw;
+  width: 10vw;
+  background-image: "../images/logoJardin.png" no-repeat center center fixed;
+  -webkit-animation-name: "animajardin";
+          animation-name: "animajardin";
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: visible;
+  top: 50vw;
+  top: 0;
+}
+
+@-webkit-keyframes animajardin {
+  0% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  10% {
+    left: 12vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logojardin.png");
+  }
+  25% {
+    left: 10vw;
+    width: 15vw;
+    height: 15vw;
+    background-image: url("../images/logojardin.png");
+  }
+  50% {
+    left: 10vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logojardin.png");
+  }
+  60% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  80% {
+    left: 25vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logoLM.png");
+  }
+  100% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+}
+
+@keyframes animajardin {
+  0% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  10% {
+    left: 12vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logojardin.png");
+  }
+  25% {
+    left: 10vw;
+    width: 15vw;
+    height: 15vw;
+    background-image: url("../images/logojardin.png");
+  }
+  50% {
+    left: 10vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logojardin.png");
+  }
+  60% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  80% {
+    left: 25vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logoLM.png");
+  }
+  100% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+}
+
+@-webkit-keyframes animaloris {
+  0% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  50% {
+    left: 30vw;
+    width: 7vw;
+    height: 7vw;
+    background-image: url("../images/logoLM.png");
+  }
+  60% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  80% {
+    left: 25vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logoLM.png");
+  }
+  100% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+}
+
+@keyframes animaloris {
+  0% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  50% {
+    left: 30vw;
+    width: 7vw;
+    height: 7vw;
+    background-image: url("../images/logoLM.png");
+  }
+  60% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  80% {
+    left: 25vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logoLM.png");
+  }
+  100% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+}
+
+@-webkit-keyframes animaprimaria {
+  0% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  15% {
+    left: 38vw;
+    width: 11vw;
+    height: 11vw;
+    background-image: url("../images/logoPrimaria.png");
+  }
+  25% {
+    left: 40vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logoPrimaria.png");
+  }
+  50% {
+    left: 38vw;
+    width: 11vw;
+    height: 11vw;
+    background-image: url("../images/logoPrimaria.png");
+  }
+  60% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  80% {
+    left: 25vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logoLM.png");
+  }
+  100% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+}
+
+@keyframes animaprimaria {
+  0% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  15% {
+    left: 38vw;
+    width: 11vw;
+    height: 11vw;
+    background-image: url("../images/logoPrimaria.png");
+  }
+  25% {
+    left: 40vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logoPrimaria.png");
+  }
+  50% {
+    left: 38vw;
+    width: 11vw;
+    height: 11vw;
+    background-image: url("../images/logoPrimaria.png");
+  }
+  60% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+  80% {
+    left: 25vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../images/logoLM.png");
+  }
+  100% {
+    left: 25vw;
+    width: 10vw;
+    height: 10vw;
+    background-image: url("../images/logoLM.png");
+  }
+}
+/*# sourceMappingURL=index.css.map */
